@@ -8,6 +8,8 @@ import java.util.Arrays;
 public class sol1012 {
     static Boolean [][] visited;
     static int[][] arr;
+    static int m;
+    static int n;
     public static void main(String[] args) throws IOException{
         // Press Opt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
@@ -15,10 +17,11 @@ public class sol1012 {
         int t=Integer.parseInt(br.readLine());
 
 
-        StringTokenizer st=new StringTokenizer(br.readLine());
+
         for(int a=0;a<t;a++) {
-            int m = Integer.parseInt(st.nextToken());
-            int n = Integer.parseInt(st.nextToken());
+            StringTokenizer st=new StringTokenizer(br.readLine());
+            m = Integer.parseInt(st.nextToken());
+            n = Integer.parseInt(st.nextToken());
             int k = Integer.parseInt(st.nextToken());
             int count=0;
 
@@ -37,9 +40,10 @@ public class sol1012 {
             }
 
             visited=new Boolean[n][m];
+           // System.out.println(Arrays.deepToString(arr));
             for(int i=0;i<n;i++){
                 for(int j=0;j<m;j++){
-                    if(arr[i][j]==1&&visited[i][j]==false){
+                    if(arr[i][j]==1&&visited[i][j]==null){
                         dfs(i,j);
                         count++;
                     }
@@ -58,6 +62,16 @@ public class sol1012 {
         //위 오 아 왼
         int [] dx={0,1,1,-1};
         int [] dy={-1,0,1,0};
+
+        for(int i=0;i<4;i++){
+            int cx=x+dx[i];
+            int cy=y+dy[i];
+            if(cx>=0&&cy>=0&&cx<m&&cy<n){
+                if(arr[cy][cx]==1&&visited[cy][cx]==null){
+                    dfs(cy,cx);
+                }
+            }
+        }
 
 
     }
