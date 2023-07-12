@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.Arrays;
 public class sol1012 {
-    static Boolean [][] visited;
+    static boolean [][] visited;
     static int[][] arr;
     static int m;
     static int n;
@@ -39,15 +39,21 @@ public class sol1012 {
 
             }
 
-            visited=new Boolean[n][m];
-           // System.out.println(Arrays.deepToString(arr));
+            visited=new boolean[n][m];
+            for(int i=0;i<arr.length;i++){
+                System.out.println(Arrays.toString(arr[i]));
+            }
+
             for(int i=0;i<n;i++){
                 for(int j=0;j<m;j++){
-                    if(arr[i][j]==1&&visited[i][j]==null){
+                    if(arr[i][j]==1&&!visited[i][j]){
                         dfs(i,j);
                         count++;
                     }
                 }
+            }
+            for(int i=0;i<arr.length;i++){
+                System.out.println(Arrays.toString(visited[i]));
             }
             System.out.println(count);
 
@@ -60,14 +66,14 @@ public class sol1012 {
     public static void dfs(int y, int x){
         visited[y][x]=true;
         //위 오 아 왼
-        int [] dx={0,1,1,-1};
+        int [] dx={0,1,0,-1};
         int [] dy={-1,0,1,0};
 
         for(int i=0;i<4;i++){
             int cx=x+dx[i];
             int cy=y+dy[i];
             if(cx>=0&&cy>=0&&cx<m&&cy<n){
-                if(arr[cy][cx]==1&&visited[cy][cx]==null){
+                if(arr[cy][cx]==1&&!visited[cy][cx]){
                     dfs(cy,cx);
                 }
             }
