@@ -25,7 +25,7 @@ public class sol15650 {
             for(int i=0;i<depth;i++){
                 System.out.print(printnum[i]+" ");
 
-                
+
             }
 
             System.out.println();
