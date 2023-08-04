@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.Collections;
-
 public class sol5430 {
     public static void main(String[] args) throws IOException{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -62,25 +61,27 @@ public class sol5430 {
 
             }
 
-
+            StringBuilder sb=new StringBuilder("[");
 
         if(n>=0){
             if(countr==true){
                 for(int k=0;k<n;k++){
-                    result=result+graph.get(k)+",";
+                    sb.append(graph.get(k)+",");
                 }
 
 
             }else{
                 Collections.reverse(graph);
                 for(int k=0;k<n;k++){
-                    result=result+graph.get(k)+",";
+                    sb.append(graph.get(k)+",");
                 }
 
             }
-            result=result.substring(0,result.length()-1);
-            result+="]";
-            System.out.println(result);
+            if(n!=0) {
+                sb.deleteCharAt(sb.length() - 1);
+            }
+            sb.append("]");
+            System.out.println(sb);
 
         }
 
