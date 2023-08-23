@@ -19,20 +19,20 @@ public class sol15656 {
         m=Integer.parseInt(st.nextToken());
         arr=new int[n];
         sb=new StringBuilder();
-        visit=new boolean[n];
+        visit=new boolean[m];
         result=new int[m];
         st=new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++){
             arr[i]=Integer.parseInt(st.nextToken());
         }
         Arrays.sort(arr);
-        back(0);
+        back(0,0);
 
         System.out.print(sb);
 
 
     }
-    public static void back(int depth){
+    public static void back(int depth,int start){
         if(depth==m){
             for(int i=0;i<m;i++){
                 sb.append(result[i]).append(" ");
@@ -41,9 +41,9 @@ public class sol15656 {
             //sb.delete(sb.length()-2,sb.length());
             return;
         }
-        for(int i=0;i<n;i++){
+        for(int i=start;i<n;i++){
             result[depth]=arr[i];
-            back(depth+1);
+            back(depth+1,i);
 
 
         }
