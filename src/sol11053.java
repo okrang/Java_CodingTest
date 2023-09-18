@@ -18,7 +18,7 @@ public class sol11053 {
         for(int i=1;i<n;i++){
             for(int j=0;j<i;j++){
                 if(graph[i]>graph[j]&&count[i]<=count[j]){
-                    count[i]=count[j]+1;
+                    count[i]=Math.max(count[i],count[j]+1);
                 }
             }
             max=Math.max(max,count[i]);
