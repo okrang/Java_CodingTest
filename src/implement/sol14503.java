@@ -43,19 +43,7 @@ public class sol14503 {
                 }
 
             }
-            if(block==4){
-                int backdirection=direction+2;
-                if(backdirection>3){
-                    backdirection-=4;
-                }
-                if(graph[r+dr[backdirection]][c+dc[backdirection]]!=1){
-                    r=r+dr[backdirection];
-                    c=c+dc[backdirection];
 
-                }else{
-                    break;
-                }
-            }
 
 
 
@@ -64,7 +52,7 @@ public class sol14503 {
         }
 
 
-        System.out.println(count);
+
 
 
     }
