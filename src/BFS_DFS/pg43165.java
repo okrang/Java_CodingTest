@@ -1,7 +1,9 @@
 package BFS_DFS;
-
+import java.util.*;
 public class pg43165 {
     class Solution {
+        ArrayList<Integer> [] nodelist=new ArrayList[3];
+
         int sum=0;
         static int [] numbers;
         int count;
