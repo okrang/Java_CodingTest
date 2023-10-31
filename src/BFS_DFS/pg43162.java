@@ -1,7 +1,7 @@
 package BFS_DFS;
-
+import java.util.*;
 public class pg43162 {
-    import java.util.*;
+
     class Solution {
         public int solution(int n, int[][] computers) {
             int answer = 0;
