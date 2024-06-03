@@ -1,8 +1,8 @@
 package DP;
-
-public class softeer70910 {
-    import java.io.*;
+import java.io.*;
 import java.util.*;
+public class softeer70910 {
+
 
     public class Main {
 

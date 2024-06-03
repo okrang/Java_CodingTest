@@ -1,7 +1,7 @@
 package Hashing;
-
+import java.util.*;
 public class prg178871 {
-    import java.util.*;
+
     class Solution {
         public String[] solution(String[] players, String[] callings) {
             String[] answer = {};

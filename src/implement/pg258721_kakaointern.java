@@ -1,7 +1,7 @@
 package implement;
-
+import java.util.*;
 public class pg258721_kakaointern {
-    import java.util.*;
+
     class Solution {
         public int solution(String[] friends, String[] gifts) {
             int answer = 0;

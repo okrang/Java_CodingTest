@@ -1,8 +1,8 @@
 package greddy;
-
-public class softeer6291 {
-    import java.io.*;
+import java.io.*;
 import java.util.*;
+public class softeer6291 {
+
 
     public class Main {
 
