@@ -47,10 +47,8 @@ public class pg1844 {
                     //System.out.println(cx);
                     dfs(cx,cy,c+1);
                     maps[cx][cy]=1;
-
                 }
-            }
         }
 
     }
-}
+}}
